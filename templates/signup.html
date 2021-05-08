@@ -1,0 +1,36 @@
+
+    {% extends 'base.html' %}
+    {% block main_container %}
+    <div id="content-wrapper">
+        <section id="contact" class="white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 fade-up">
+                        <h3>Contact Information</h3>
+                        <p><span class="icon icon-home"></span>Seoul, South Korea<br/>
+                            <span class="icon icon-phone"></span>+82 1111 1111<br/>
+                            <span class="icon icon-mobile"></span>+82 1111 1111<br/>
+                            <span class="icon icon-envelop"></span> <a href="#">contact@thedeal.com</a> <br/>
+                            <span class="icon icon-twitter"></span> <a href="#">@infinityteam.com</a> <br/>
+                            <span class="icon icon-facebook"></span> <a href="#">Infinity Agency</a> <br/>
+                        </p>
+                    </div><!-- col -->
+
+                    <div class="col-md-8 fade-up">
+                        <h3>Know Your Information</h3>
+                        <br>
+                        <br>
+                        <form method="post" action="/thanks" id="contactform">
+                            <input type="text" name="name" id="name" placeholder="Name" required/>
+                            <input type="text" name="email" id="email" placeholder="Email" required/>
+                            <input type="text" name="phone" id="website" placeholder="Phone"/>
+                            <textarea name="comments" id="comments" placeholder="Comments"></textarea>
+                            <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Submit" />
+                        </form>
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div>
+        </section>
+    </div>
+
+    {% endblock %}

@@ -4,12 +4,21 @@ from flask import Flask, render_template, request
 #Flask 객체 인스턴스 생성
 app = Flask(__name__)
 
-@app.route('/signin',methods=['POST'])
-def signin():
+@app.route('/thanks', methods=['POST'])
+def thanks():
+    print("thanks")
     user_data = request.form
-    user_email = user_data['user_email']
+    user_name = user_data['name']
+    user_email = user_data['email']
+    user_phone = user_data['phone']
+    user_text = user_data['comments']
     print(user_email)
     return render_template('thanks.html')
+
+@app.route('/subscribe') # 접속하는 url
+def signup():
+    print("subscribe")
+    return render_template('subscribe.html')
 
 @app.route('/') # 접속하는 url
 def index():
