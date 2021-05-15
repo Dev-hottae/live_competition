@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- Basic Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Application</h6>
+                </div>
+                <div class="card-body">
+                    <form action="/joinCompete_pro" method="post">
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="text" class="form-control form-control-user"
+                                    placeholder="종목명" name="stock_name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="text" class="form-control form-control-user" 
+                                placeholder="종목코드(네이버)" name="stock_code">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                선정이유
+                                <textarea class="form-control form-control-user" name="stock_reason" rows="15">
+                                </textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
+                        <hr>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->
+{% endblock %}
