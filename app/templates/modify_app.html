@@ -8,29 +8,29 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Application</h6>
+                    <p>네이버 금융에서 종목명과 코드가 정확히 일치해야 제출가능합니다.</p>
                 </div>
                 <div class="card-body">
                     <form action="/joinCompete_pro" method="post">
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 <input type="text" class="form-control form-control-user"
-                                    placeholder="종목명" name="stock_name">
+                                    placeholder="종목명(ex 삼성전자)" name="stock_name" value="{{data['stock_name']}}" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 <input type="text" class="form-control form-control-user" 
-                                placeholder="종목코드(네이버)" name="stock_code">
+                                placeholder="종목코드(ex 005930)" name="stock_code" value="{{data['stock_id']}}" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 선정이유
-                                <textarea class="form-control form-control-user" name="stock_reason" rows="15">
-                                </textarea>
+                                <textarea class="form-control form-control-user" name="stock_reason" rows="15">{{data['stock_reason']}}</textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">Modify</button>
                         <hr>
                     </form>
                 </div>

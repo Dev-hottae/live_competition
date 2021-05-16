@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">All Applications</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tables</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>사번</th>
+                            <th>이름</th>
+                            <th>선정종목</th>
+                            <th>종목코드</th>
+                            <th>선정이유</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for idx, row in data.iterrows() %}
+                        <tr>
+                            <td>{{row['user_id']}}</td>
+                            <td>{{row['user_name']}}</td>
+                            <td>{{row['stock_name']}}</td>
+                            <td>{{row['stock_code']}}</td>
+                            <td>{{row['stock_reason']}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+{% endblock %}

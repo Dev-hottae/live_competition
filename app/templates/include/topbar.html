@@ -32,7 +32,7 @@
             </div>
         </li>
         
-        {% if session.get('user') == None %}
+        {% if session.get('user_name') == None %}
             <!-- Nav Item - SignUp -->
             <li class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link" href="/signup">
@@ -60,7 +60,7 @@
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{session.get('user')['user_name']}}</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{session.get('user_name')}}</span>
                     <img class="img-profile rounded-circle"
                         src="../static/img/undraw_profile.svg">
                 </a>
